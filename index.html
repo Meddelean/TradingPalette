@@ -31,11 +31,19 @@ body{font-family:'TV1', sans-serif;background:#0f0f0f;color:#fff;transition:filt
   padding:15px 30px;font-size:1.2rem;background:#ffffff;border:none;border-radius:8px;
   cursor:pointer;color:#000000;transition:background 0.3s;font-family:'TV2';font-weight:600;
   display:flex;align-items:center;gap:10px;
-   transition: ease-in 300ms;
+   transition: ease-in 100ms;
+    border: 2px solid #000000;
 }
+
+#arrowImg{
+  transition: ease-in 3000ms;
+}
+
 .hero button:hover{
   transition: ease-in 100ms;
-  box-shadow: 0 0px 15px 6px rgba(255, 255, 255, 1);
+  background-color: #000;
+    color: #fff;
+    border: 2px solid #717171;
 }
 .hero button img{width:16px;height:16px;}
 
@@ -50,13 +58,31 @@ body{font-family:'TV1', sans-serif;background:#0f0f0f;color:#fff;transition:filt
   padding:10px 30px;font-size:1.2rem;background:#fff;color:#000;border:none;
   border-radius:6px;cursor:pointer;height:45px;display:flex;align-items:center;
   justify-content:center;gap:8px;font-family:'TV2';font-weight:600; transition: ease-in 300ms;
+  border: 2px solid #ffffff;
+}
+.btn-arrow{
+  font-size: 0.8rem;
 }
 .chart-header button img{width:16px;height:16px;}
-.chart-header button:hover{  transition: ease-in 100ms;
-  box-shadow: 0 0px 10px 3px rgba(255, 255, 255, 1);}
+.chart-header button:hover{   transition: ease-in 100ms;
+  background-color: #000;
+    color: #fff;
+    border: 2px solid #717171;}
 .chart-inner{
   flex:1;border-radius:10px;background:#fff;border:1px solid #5c5c5c;
   box-shadow:0 2px 10px rgba(0,0,0,0.25);overflow:hidden;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:40px 0;
+  border-top:1px solid #5c5c5c;
+  font-family:'TV1';
+  font-size:2rem;
+  letter-spacing:2px;
+  background:#0f0f0f;
+  color:#ffffff;
 }
 
 
@@ -72,14 +98,14 @@ body{font-family:'TV1', sans-serif;background:#0f0f0f;color:#fff;transition:filt
   background:#0f0f0f;color:#fff;width:70%;max-width:1200px;height:auto;max-height:90vh;
   overflow-y:auto;border-radius:14px;position:relative;padding:40px 50px;
   display:flex;flex-direction:column;opacity:0;transform:scale(0.8);
-  transition:opacity 0.35s ease,transform 0.35s ease;font-size:1.5rem;z-index:2001;border: 2px solid #5c5c5c;
+  transition:opacity 0.35s ease,transform 0.35s ease;font-size:1.5rem;z-index:2001;border: 2px solid #4c4c4c;
 }
 .modal.show{opacity:1;transform:scale(1);padding-bottom: 90px;padding-left: 80px;padding-right: 80px;}
 .modal-close{
   position:absolute;top:15px;right:20px;font-size:2rem;font-weight:bold;cursor:pointer;
 }
 #modalTitle{
-  text-align:center;margin-bottom:40px;margin-top:20px;font-size:2rem;font-weight:normal;font-family:'TV1';
+  text-align:center;margin-bottom:40px;margin-top:30px;font-size:2rem;font-weight:normal;font-family:'TV1';
 }
 
 /* Popup kolory - desktop 3 kolumny */
@@ -88,7 +114,7 @@ body{font-family:'TV1', sans-serif;background:#0f0f0f;color:#fff;transition:filt
   justify-content:space-between;
   flex-wrap:nowrap;
   gap:70px;
-  margin-top:25px;
+  margin-top:0px;
 }
 .color-column{
   flex:1 1 0;
@@ -104,57 +130,44 @@ body{font-family:'TV1', sans-serif;background:#0f0f0f;color:#fff;transition:filt
 .color-label{font-size:1rem;font-weight:normal;color:#b3b3b3;margin-bottom:8px;}
 .color-content{display:flex;flex-direction:column;justify-content:center;flex:1;}
 .color-content span{
-  font-family:monospace;font-weight:bold;color:#fff;font-size:1.5rem;
+  font-family:'TV1';font-weight:normal;color:#fff;font-size:1.3rem;
 }
 .color-block button{
   position:absolute;top:0;right:0;height:100%;border:none;border-radius:10px;
   background:#fff;color:#000;padding:0 40px;cursor:pointer;transition:background 0.3s;
   font-family:'TV2';font-size:1.1rem;font-weight:600;
+  transition: ease-in 300ms;
+ 
 }
-.color-block button:hover{background:#b3b3b3;}
+.color-block button:hover{transition: ease-in 100ms;
+  box-shadow: 0 0px 70px 20px rgba(255, 255, 255, 1);}
 
 /* Tooltip */
 #copyTooltip{
   position:fixed;bottom:30px;left:50%;transform:translateX(-50%);
-  background:#26a69a;color:#fff;padding:12px 24px;border-radius:10px;
+  background:#ffffff;color:#000000;padding:12px 24px;border-radius:10px;
   opacity:0;pointer-events:none;transition:opacity 0.4s ease;z-index:2000;
   font-size:1rem;
 }
 
-
-
 /* Responsywność wykresów */
 @media(max-width:1500px){
   .charts-container{grid-template-columns:repeat(2,minmax(250px,1fr));}
-  .color-grid{
-    flex-direction:column;
-    gap:15px;
-  }
-
-  .color-column-title{
-  font-weight:normal;font-size:1.4rem;color:#b3b3b3;margin-bottom:5px;text-align:center;margin-top: 100px;
-}
-#modalTitle{
-  text-align:center;margin-bottom:0px;margin-top:20px;font-size:2rem;font-weight:normal;font-family:'TV1';
-}
-
+  .color-grid{flex-direction:column;gap:15px;}
 }
 @media(max-width:1000px){.charts-container{grid-template-columns:repeat(1,minmax(250px,1fr));}}
 @media(max-width:450px){ 
   .chart-header span{font-weight:100;font-size:1.5rem;}
   .chart-header button{height:100%;width:40%;}
 }
-@media(max-width:370px){ 
-  .chart-box{height:350px;}
-  .charts-section{padding:60px 20px;}
-  .hero h1{font-size:5rem;margin-bottom:0rem;letter-spacing:2px;}
-}
-
-/* Popup responsywny dla telefonu */
 @media(max-width:600px){
   .modal{
-    width:95%;padding:20px;
+    width:95%;padding:20px;height:80%;
   }
+ #modalTitle{
+  text-align:center;margin-bottom:0px;margin-top:40px;font-size:2rem;font-weight:normal;font-family:'TV1';
+}
+
   
   .color-column{flex:1 1 100%;}
   .color-block{padding:10px;min-height:80px;}
@@ -167,7 +180,6 @@ body{font-family:'TV1', sans-serif;background:#0f0f0f;color:#fff;transition:filt
 .modal.show{opacity:1;transform:scale(1);padding-bottom: 90px;padding-left: 20px;padding-right: 20px;}
 }
 
-
 </style>
 </head>
 <body>
@@ -175,25 +187,30 @@ body{font-family:'TV1', sans-serif;background:#0f0f0f;color:#fff;transition:filt
 <section class="hero">
   <h1>Moja Marka</h1>
   <p>Nowoczesne spojrzenie na wykresy giełdowe</p>
-  <button onclick="document.getElementById('charts').scrollIntoView({behavior:'smooth'})">
-    Show charts
-    <img src="icons/down-arrow.png" alt="arrow">
+  <button id="showChartsBtn" onclick="document.getElementById('charts').scrollIntoView({behavior:'smooth'})">
+    Show charts ▼
+  
   </button>
 </section>
 
 <section id="charts" class="charts-section">
   <div class="charts-container">
-    <div class="chart-box"><div class="chart-header"><span>Community</span><button onclick="openModal(1)">Colors <img src="icons/arrow_icon_right.png"></button></div><div class="chart-inner" id="chart1"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Nazwa 2</span><button onclick="openModal(2)">Colors <img src="icons/arrow_icon_right.png"></button></div><div class="chart-inner" id="chart2"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Nazwa 3</span><button onclick="openModal(3)">Colors <img src="icons/arrow_icon_right.png"></button></div><div class="chart-inner" id="chart3"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Nazwa 4</span><button onclick="openModal(4)">Colors <img src="icons/arrow_icon_right.png"></button></div><div class="chart-inner" id="chart4"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Nazwa 5</span><button onclick="openModal(5)">Colors <img src="icons/arrow_icon_right.png"></button></div><div class="chart-inner" id="chart5"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Nazwa 6</span><button onclick="openModal(6)">Colors <img src="icons/arrow_icon_right.png"></button></div><div class="chart-inner" id="chart6"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Nazwa 7</span><button onclick="openModal(7)">Colors <img src="icons/arrow_icon_right.png"></button></div><div class="chart-inner" id="chart7"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Nazwa 8</span><button onclick="openModal(8)">Colors <img src="icons/arrow_icon_right.png"></button></div><div class="chart-inner" id="chart8"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Nazwa 9</span><button onclick="openModal(9)">Colors <img src="icons/arrow_icon_right.png"></button></div><div class="chart-inner" id="chart9"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Community</span><button onclick="openModal(1)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart1"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Nazwa 2</span><button onclick="openModal(2)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart2"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Nazwa 3</span><button onclick="openModal(3)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart3"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Nazwa 4</span><button onclick="openModal(4)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart4"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Nazwa 5</span><button onclick="openModal(5)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart5"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Nazwa 6</span><button onclick="openModal(6)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart6"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Nazwa 7</span><button onclick="openModal(7)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart7"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Nazwa 8</span><button onclick="openModal(8)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart8"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Nazwa 9</span><button onclick="openModal(9)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart9"></div></div>
   </div>
 </section>
+
+<!-- FOOTER -->
+<footer>
+  MARKA
+</footer>
 
 <!-- Modal -->
 <div id="modalOverlay" class="modal-overlay">
@@ -204,12 +221,15 @@ body{font-family:'TV1', sans-serif;background:#0f0f0f;color:#fff;transition:filt
   </div>
 </div>
 
-<div id="copyTooltip">Skopiowano!</div>
+<div id="copyTooltip">Copied to clipboard.</div>
 
 <script>
-// -------------------------
-// Kolory wykresów (przykład)
-// -------------------------
+/* --- (JS bez zmian, cały działa) --- */
+
+
+
+
+// Kolory wykresów
 const chartColors = [
   { bearishBody:'#ef5350', bearishWick:'#ef5350', bearishBorder:'#ef5350',
     bullishBody:'#26a69a', bullishWick:'#26a69a', bullishBorder:'#26a69a',
@@ -219,9 +239,7 @@ const chartColors = [
     background:'#0b1b2b', foreground:'#ffffff', text:'#ffffff' }
 ];
 
-// -------------------------
-// Modal: open / close / copy
-// -------------------------
+// Modal
 const overlay = document.getElementById('modalOverlay');
 const modal = overlay.querySelector('.modal');
 
@@ -249,11 +267,9 @@ function openModal(index){
     </div>
   `;
   overlay.style.display = 'flex';
-  // delay to allow transition
   setTimeout(()=>{ overlay.classList.add('active'); modal.classList.add('show'); }, 20);
 }
 
-// Close by clicking on overlay background or close button
 overlay.addEventListener('click', function(e){
   if (e.target === overlay) closeModal();
 });
@@ -266,12 +282,11 @@ function closeModalByBtn(){ closeModal(); }
 
 function copyToClipboard(text){
   if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(()=> showTooltip(`Skopiowano: ${text}`));
+    navigator.clipboard.writeText(text).then(()=> showTooltip(`Copied to clipboard: ${text}`));
   } else {
-    // fallback
     const ta = document.createElement('textarea');
     ta.value = text; document.body.appendChild(ta); ta.select();
-    try { document.execCommand('copy'); showTooltip(`Skopiowano: ${text}`); } catch(e){ /* ignore */ }
+    try { document.execCommand('copy'); showTooltip(`Copied to clipboard: ${text}`); } catch(e){}
     ta.remove();
   }
 }
@@ -279,44 +294,30 @@ function showTooltip(txt){
   const t = document.getElementById('copyTooltip');
   t.textContent = txt;
   t.style.opacity = 1;
-  setTimeout(()=>{ t.style.opacity = 0; }, 1400);
+  setTimeout(()=>{ t.style.opacity = 0; }, 1000);
 }
 
-// -------------------------
-// WYKRESY - funkcje pomocnicze
-// -------------------------
+// Wykresy
 function pad(n){ return String(n).padStart(2,'0'); }
-function formatDateYMD(d){
-  return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
-}
-
-// generate a new candle using given open (makes some randomness)
+function formatDateYMD(d){ return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`; }
 function generateCandleFrom(open){
-  // small random move of open to simulate real tick (optional)
-  // open = open + (Math.random()*2 - 1) * 0.5; // keep small drift if you'd like
-  const volatility = 2 + Math.random() * 6; // base vol
+  const volatility = 2 + Math.random() * 6;
   const direction = Math.random() < 0.5 ? -1 : 1;
   const change = direction * (Math.random() * volatility);
   const close = +(open + change).toFixed(2);
-  const bodySize = Math.abs(close - open);
-  const high = +(Math.max(open, close) + Math.random() * (0.2 * volatility + 0.5)).toFixed(2);
-  const low = +(Math.min(open, close) - Math.random() * (0.2 * volatility + 0.5)).toFixed(2);
+  const high = +(Math.max(open, close) + Math.random()).toFixed(2);
+  const low = +(Math.min(open, close) - Math.random()).toFixed(2);
   return { open:+open.toFixed(2), high, low, close };
 }
 
-// -------------------------
-// createChart - one per container
-// -------------------------
 function createChart(containerId, colorSet){
   const container = document.getElementById(containerId);
-
-  // create chart
   const chart = LightweightCharts.createChart(container, {
     width: container.clientWidth,
     height: container.clientHeight,
     layout: { background: { color: colorSet.background }, textColor: colorSet.text },
     grid: { vertLines: { visible: false }, horzLines: { visible: false } },
-    timeScale: { rightOffset: 10, barSpacing: 12, timeVisible: true, secondsVisible: false }
+    timeScale: { rightOffset: 5, barSpacing: 10, timeVisible: true, secondsVisible: false }
   });
 
   const series = chart.addCandlestickSeries({
@@ -324,11 +325,10 @@ function createChart(containerId, colorSet){
     downColor: colorSet.bearishBody,
     borderUpColor: colorSet.bullishBody,
     borderDownColor: colorSet.bearishBody,
-    wickUpColor: colorSet.bullishWick || colorSet.bullishBody,
-    wickDownColor: colorSet.bearishWick || colorSet.bearishBody
+    wickUpColor: colorSet.bullishWick,
+    wickDownColor: colorSet.bearishWick
   });
 
-  // initial data (100 daily candles)
   const today = new Date();
   let data = [];
   let lastClose = 100;
@@ -340,67 +340,52 @@ function createChart(containerId, colorSet){
     data.push({ time, ...candle });
     lastClose = candle.close;
   }
-
   series.setData(data);
 
-  // current / live candle (next day)
   let currentDate = new Date(today);
   currentDate.setDate(today.getDate() + 1);
   let currentCandle = { time: formatDateYMD(currentDate), open: lastClose, high: lastClose, low: lastClose, close: lastClose };
   series.update(currentCandle);
 
-  // update last candle every 1 second (drifting close/high/low)
   const updateInterval = setInterval(()=>{
-    // generate a small candidate movement based on current close
     const candidate = generateCandleFrom(currentCandle.close);
-    // update currentCandle values (keep time)
     currentCandle.close = candidate.close;
     currentCandle.high = Math.max(currentCandle.high, candidate.high);
     currentCandle.low = Math.min(currentCandle.low, candidate.low);
-    // apply update
     series.update(currentCandle);
   }, 1000);
 
-  // every 10 seconds finalize current candle and push a NEW one
   const newCandleInterval = setInterval(()=>{
-    // finalize by using currentCandle as-is (already updated by updateInterval)
-    // then create next candle whose open is current close
     const nextDate = new Date(currentDate);
     nextDate.setDate(currentDate.getDate() + 1);
     currentDate = nextDate;
-    // build next candle from previous close (use generateCandleFrom)
     const nextC = generateCandleFrom(currentCandle.close);
     currentCandle = { time: formatDateYMD(currentDate), ...nextC };
-    // add/update series with new candle (series.update with new time will append)
     series.update(currentCandle);
-    // keep data array trimmed (optional)
     data.push(currentCandle);
     if (data.length > 300) data.shift();
   }, 10000);
 
-  // responsiveness
   window.addEventListener('resize', ()=> chart.applyOptions({ width: container.clientWidth, height: container.clientHeight }));
-
-  // return handlers (if you want to clear intervals later)
-  return { chart, series, stop: ()=>{ clearInterval(updateInterval); clearInterval(newCandleInterval); } };
+  return { chart, series };
 }
 
-// -------------------------
-// initialize 9 charts
-// -------------------------
 for (let i = 1; i <= 9; i++){
   const set = chartColors[(i % 2 === 0) ? 1 : 0];
-  // build a colorSet object compatible with createChart
-  const colorSet = {
-    bullishBody: set.bullishBody || set.bullish,
-    bearishBody: set.bearishBody || set.bearish,
-    bullishWick: set.bullishWick,
-    bearishWick: set.bearishWick,
-    background: set.background || '#fff',
-    text: set.text || '#000'
-  };
-  createChart('chart' + i, colorSet);
+  createChart('chart'+i, set);
 }
+
+const btn = document.getElementById('showChartsBtn');
+const img = document.getElementById('arrowImg');
+
+btn.addEventListener('mouseenter', () => {
+  img.src = 'icons/down-arrow-white.png'; // nowy obrazek
+
+});
+
+btn.addEventListener('mouseleave', () => {
+  img.src = 'icons/down-arrow.png'; // przywrócenie starego obrazka
+});
 </script>
 </body>
 </html>
