@@ -74,6 +74,8 @@ body{font-family:'TV1', sans-serif;background:#0f0f0f;color:#fff;transition:filt
    transition: ease-in 300ms;
     border: 2px solid #ffffff;
     animation: flash 1s ease 0.5s;
+    margin-bottom:7rem;
+   
 }
 @keyframes flash {
   0% {
@@ -110,10 +112,10 @@ body{font-family:'TV1', sans-serif;background:#0f0f0f;color:#fff;transition:filt
 }
 .chart-box{display:flex;flex-direction:column;height:400px;}
 .chart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;background:#0f0f0f;}
-.chart-header span{font-weight:100;font-size:2rem;}
+.chart-header span{font-weight:100;font-size:2rem;word-spacing:5px;}
 .chart-header button{
   font-size:1.2rem;background:#fff;color:#000;
-  border-radius:6px;cursor:pointer;height:45px;display:flex;align-items:center;
+  border-radius:6px;cursor:pointer;height:50px;display:flex;align-items:center;
   justify-content:center;gap:8px;font-family:'TV2';font-weight:600; transition: ease-in 300ms;
   border: 2px solid #ffffff;
   padding-top:5px;
@@ -259,7 +261,12 @@ footer p{
 }
   
 }
-@media(max-width:1000px){.charts-container{grid-template-columns:repeat(1,minmax(250px,1fr));}}
+@media(max-width:1000px){.charts-container{grid-template-columns:repeat(1,minmax(250px,1fr));} .hero h1{
+     
+        line-height: 100%;
+        margin-bottom: 30px;
+       
+    }}
 @media(max-width:730px){
  .hero button{ margin-bottom: 200px; }
 }
@@ -286,13 +293,21 @@ footer p{
 }
     .hero h1{
         font-size: 4.5rem;
+        line-height: 100%;
+        margin-bottom: 30px;
+       
+    }
+    .hero p{
+        font-size: 1.5rem;
+        line-height: 100%;
+             margin-bottom: 70px;
        
     }
     
 
 
 .chart-header span{font-weight:100;font-size:1.5rem;}
-.chart-header button{height:100%;width:40%;}
+.chart-header button{height: 50px;width:40%;}
 
 .chart-box{height:350px;}
   .charts-section{padding:60px 20px;}
@@ -342,15 +357,24 @@ footer p{
 
 <section id="charts" class="charts-section">
   <div class="charts-container">
-    <div class="chart-box"><div class="chart-header"><span>Community</span><button onclick="openModal(1)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart1"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Nazwa 2</span><button onclick="openModal(2)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart2"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Dark Coffe</span><button onclick="openModal(1)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart1"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Cyan Wave</span><button onclick="openModal(2)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart2"></div></div>
     <div class="chart-box"><div class="chart-header"><span>Rolex</span><button onclick="openModal(3)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart3"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Nazwa 4</span><button onclick="openModal(4)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart4"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Nazwa 5</span><button onclick="openModal(5)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart5"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Nazwa 6</span><button onclick="openModal(6)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart6"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Nazwa 7</span><button onclick="openModal(7)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart7"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Nazwa 8</span><button onclick="openModal(8)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart8"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Nazwa 9</span><button onclick="openModal(9)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart9"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>McDonald's</span><button onclick="openModal(4)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart4"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Apple</span><button onclick="openModal(5)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart5"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Spotify</span><button onclick="openModal(6)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart6"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Twitch</span><button onclick="openModal(7)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart7"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Tiffany</span><button onclick="openModal(8)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart8"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>LA Lakers</span><button onclick="openModal(9)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart9"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Cappuccino</span><button onclick="openModal(10)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart10"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>CYAN WAVE</span><button onclick="openModal(11)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart11"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>ROLEX</span><button onclick="openModal(12)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart12"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>McDonald's</span><button onclick="openModal(13)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart13"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Apple</span><button onclick="openModal(14)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart14"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Spotify</span><button onclick="openModal(15)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart15"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Twitch</span><button onclick="openModal(16)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart16"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Tiffany</span><button onclick="openModal(17)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart17"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>LA Lakers</span><button onclick="openModal(18)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart18"></div></div>
   </div>
 </section>
 
@@ -375,15 +399,24 @@ footer p{
 // --- JS ZMIENIONY ---
 // Kolory dla każdego wykresu
 const chartColors = [
-  { bearishBody:'#ef5350', bearishWick:'#ef5350', bearishBorder:'#ef5350', bullishBody:'#26a69a', bullishWick:'#26a69a', bullishBorder:'#26a69a', background:'#ffffff', foreground:'#0b1b2b', text:'#000000' },
-  { bearishBody:'#8D493A', bearishWick:'#8D493A', bearishBorder:'#8D493A', bullishBody:'#D0B8A8', bullishWick:'#D0B8A8', bullishBorder:'#D0B8A8', background:'#0b1b2b', foreground:'#ffffff', text:'#ffffff' },
-  { bearishBody:'#a37e2c', bearishWick:'#a37e2c', bearishBorder:'#a37e2c', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#006039', foreground:'#ffffff', text:'#ffffff' },
-  { bearishBody:'#ef9a9a', bearishWick:'#ef9a9a', bearishBorder:'#ef9a9a', bullishBody:'#a5d6a7', bullishWick:'#a5d6a7', bullishBorder:'#a5d6a7', background:'#f9f9f9', foreground:'#333', text:'#000' },
-  { bearishBody:'#ff8a65', bearishWick:'#ff8a65', bearishBorder:'#ff8a65', bullishBody:'#4db6ac', bullishWick:'#4db6ac', bullishBorder:'#4db6ac', background:'#fafafa', foreground:'#222', text:'#000' },
-  { bearishBody:'#e57373', bearishWick:'#e57373', bearishBorder:'#e57373', bullishBody:'#81c784', bullishWick:'#81c784', bullishBorder:'#81c784', background:'#f5f5f5', foreground:'#111', text:'#000' },
-  { bearishBody:'#ba68c8', bearishWick:'#ba68c8', bearishBorder:'#ba68c8', bullishBody:'#4fc3f7', bullishWick:'#4fc3f7', bullishBorder:'#4fc3f7', background:'#ffffff', foreground:'#000', text:'#111' },
-  { bearishBody:'#ffb74d', bearishWick:'#ffb74d', bearishBorder:'#ffb74d', bullishBody:'#4db6ac', bullishWick:'#4db6ac', bullishBorder:'#4db6ac', background:'#fafafa', foreground:'#111', text:'#000' },
-  { bearishBody:'#90a4ae', bearishWick:'#90a4ae', bearishBorder:'#90a4ae', bullishBody:'#f06292', bullishWick:'#f06292', bullishBorder:'#f06292', background:'#f0f0f0', foreground:'#000', text:'#111' }
+  { bearishBody:'#8d493a', bearishWick:'#8d493a', bearishBorder:'#8d493a', bullishBody:'#d0b8a8', bullishWick:'#d0b8a8', bullishBorder:'#d0b8a8', background:'#191919', foreground:'#ffffff', text:'#ffffff' },
+  { bearishBody:'#00bcd4', bearishWick:'#00bcd4', bearishBorder:'#00bcd4', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#171d2f', foreground:'#ffffff', text:'#ffffff' },
+  { bearishBody:'#7b6229', bearishWick:'#ffaf00', bearishBorder:'#ffaf00', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#0e4b30', foreground:'#ffffff', text:'#ffffff' },
+  { bearishBody:'#da291c', bearishWick:'#da291c', bearishBorder:'#da291c', bullishBody:'#ffc72c', bullishWick:'#ffc72c', bullishBorder:'#ffc72c', background:'#191919', foreground:'#333333', text:'#ffffff' },
+  { bearishBody:'#000000', bearishWick:'#000000', bearishBorder:'#000000', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#a2aaad', foreground:'#222222', text:'#000000' },
+  { bearishBody:'#1db954', bearishWick:'#1db954', bearishBorder:'#1db954', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#191414', foreground:'#111111', text:'#ffffff' },
+  { bearishBody:'#9146ff', bearishWick:'#9146ff', bearishBorder:'#9146ff', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#000000', foreground:'#ffffff', text:'#ffffff' },
+  { bearishBody:'#000000', bearishWick:'#000000', bearishBorder:'#000000', bullishBody:'#81d8d0', bullishWick:'#000000', bullishBorder:'#000000', background:'#ffffff', foreground:'#000000', text:'#000000' },
+  { bearishBody:'#fdb927', bearishWick:'#fdb927', bearishBorder:'#fdb927', bullishBody:'#9953dc', bullishWick:'#9953dc', bullishBorder:'#9953dc', background:'#000000', foreground:'#ffffff', text:'#ffffff' },
+  { bearishBody:'#8d493a', bearishWick:'#8d493a', bearishBorder:'#8d493a', bullishBody:'#d0b8a8', bullishWick:'#8d493a', bullishBorder:'#8d493a', background:'#f8ede3', foreground:'#ffffff', text:'#000000' },
+  { bearishBody:'#00bcd4', bearishWick:'#00bcd4', bearishBorder:'#00bcd4', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#171d2f', foreground:'#ffffff', text:'#ffffff' },
+  { bearishBody:'#7b6229', bearishWick:'#ffaf00', bearishBorder:'#ffaf00', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#0e4b30', foreground:'#ffffff', text:'#ffffff' },
+  { bearishBody:'#da291c', bearishWick:'#da291c', bearishBorder:'#da291c', bullishBody:'#ffc72c', bullishWick:'#ffc72c', bullishBorder:'#ffc72c', background:'#191919', foreground:'#333333', text:'#ffffff' },
+  { bearishBody:'#000000', bearishWick:'#000000', bearishBorder:'#000000', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#a2aaad', foreground:'#222222', text:'#000000' },
+  { bearishBody:'#1db954', bearishWick:'#1db954', bearishBorder:'#1db954', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#191414', foreground:'#111111', text:'#ffffff' },
+  { bearishBody:'#9146ff', bearishWick:'#9146ff', bearishBorder:'#9146ff', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#000000', foreground:'#ffffff', text:'#ffffff' },
+  { bearishBody:'#000000', bearishWick:'#000000', bearishBorder:'#000000', bullishBody:'#81d8d0', bullishWick:'#000000', bullishBorder:'#000000', background:'#ffffff', foreground:'#000000', text:'#000000' },
+  { bearishBody:'#fdb927', bearishWick:'#fdb927', bearishBorder:'#fdb927', bullishBody:'#9953dc', bullishWick:'#9953dc', bullishBorder:'#9953dc', background:'#000000', foreground:'#ffffff', text:'#ffffff' }
 ];
 
 // Modal
@@ -450,14 +483,15 @@ function createChart(containerId, colorSet){
     height:container.clientHeight,
     layout:{ background:{color: colorSet.background}, textColor: colorSet.text },
     grid:{ vertLines:{visible:false}, horzLines:{visible:false} },
-    timeScale:{ rightOffset:5, barSpacing:10, timeVisible:true, secondsVisible:false }
+    timeScale:{ rightOffset:5, barSpacing:10, timeVisible:true, secondsVisible:false,borderVisible: false  },
+    rightPriceScale:{borderVisible: false}
   });
 
   const series=chart.addCandlestickSeries({
     upColor: colorSet.bullishBody,
     downColor: colorSet.bearishBody,
-    borderUpColor: colorSet.bullishBody,
-    borderDownColor: colorSet.bearishBody,
+    borderUpColor: colorSet.bullishWick,
+    borderDownColor: colorSet.bearishWick,
     wickUpColor: colorSet.bullishWick,
     wickDownColor: colorSet.bearishWick
   });
@@ -501,7 +535,7 @@ function createChart(containerId, colorSet){
 }
 
 // Tworzenie wykresów z osobnymi kolorami
-for(let i=1;i<=9;i++){
+for(let i=1;i<=18;i++){
   createChart('chart'+i, chartColors[i-1]);
 }
 
