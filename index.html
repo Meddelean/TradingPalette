@@ -65,7 +65,7 @@ body{font-family:'TV1', sans-serif;background:#0f0f0f;color:#fff;transition:filt
     }
 
 .hero h1{font-size:7rem;margin-bottom:0rem;letter-spacing:2px;}
-.hero p{font-size:2rem;margin-bottom:2rem;color:#b3b3b3;font-family:'TV2';margin-left:20px;margin-right:20px;}
+.hero p{font-size:2rem;margin-bottom:2rem;color:#b3b3b3;font-family:'TV2';margin-left:20px;margin-right:20px;font-weight: 700;}
 
 .hero button{
   padding:15px 30px;font-size:1.2rem;background:#ffffff;border:none;border-radius:8px;
@@ -159,7 +159,7 @@ footer h2{
   text-align:center;
   font-family:'TV2';
   font-size: 1rem;
-  font-weight: 200;
+  font-weight: 600;
   letter-spacing:2px;
   background:#0f0f0f;
   color:#ffffff;
@@ -176,6 +176,23 @@ footer p{
   color:#b3b3b3;
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+#footer_logo{
+  color: #737373;
+}
+
+a {
+  color: #737373;
+  text-decoration: underline; /* usuwa podkreślenie */
+  cursor: pointer;
+   transition: ease-in 200ms;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+   transition: ease-in 200ms;
 }
 
 /* Modal popup */
@@ -367,22 +384,28 @@ footer p{
     <div class="chart-box"><div class="chart-header"><span>Tiffany</span><button onclick="openModal(8)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart8"></div></div>
     <div class="chart-box"><div class="chart-header"><span>LA Lakers</span><button onclick="openModal(9)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart9"></div></div>
     <div class="chart-box"><div class="chart-header"><span>Cappuccino</span><button onclick="openModal(10)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart10"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>CYAN WAVE</span><button onclick="openModal(11)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart11"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>ROLEX</span><button onclick="openModal(12)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart12"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>McDonald's</span><button onclick="openModal(13)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart13"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Apple</span><button onclick="openModal(14)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart14"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Spotify</span><button onclick="openModal(15)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart15"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Twitch</span><button onclick="openModal(16)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart16"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>Tiffany</span><button onclick="openModal(17)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart17"></div></div>
-    <div class="chart-box"><div class="chart-header"><span>LA Lakers</span><button onclick="openModal(18)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart18"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Money</span><button onclick="openModal(11)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart11"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Gold</span><button onclick="openModal(12)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart12"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Cute</span><button onclick="openModal(13)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart13"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Deep Sea</span><button onclick="openModal(14)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart14"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Silver</span><button onclick="openModal(15)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart15"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Egypt</span><button onclick="openModal(16)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart16"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Bedrock</span><button onclick="openModal(17)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart17"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Bamboo</span><button onclick="openModal(18)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart18"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Cyber Rose</span><button onclick="openModal(19)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart19"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Hive</span><button onclick="openModal(20)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart20"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Hacker</span><button onclick="openModal(21)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart21"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Neon</span><button onclick="openModal(22)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart22"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>ICT</span><button onclick="openModal(23)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart23"></div></div>
+    <div class="chart-box"><div class="chart-header"><span>Inferno</span><button onclick="openModal(24)">Colors <p class="btn-arrow">▶</p></button></div><div class="chart-inner" id="chart24"></div></div>
   </div>
 </section>
 
 <footer>
-  <h1>TradingPalette</h1>
+  <h1><span id="footer_logo">Trading</span>Palette</h1>
   <h2>Customize. Visualize. Capitalize.
 </h2>
-  <p>Contact</p>
+  <p><a href="https://linktr.ee/TradingPalette" target="_blank">Contact</a></p>
 </footer>
 
 <div id="modalOverlay" class="modal-overlay">
@@ -409,14 +432,20 @@ const chartColors = [
   { bearishBody:'#000000', bearishWick:'#000000', bearishBorder:'#000000', bullishBody:'#81d8d0', bullishWick:'#000000', bullishBorder:'#000000', background:'#ffffff', foreground:'#000000', text:'#000000' },
   { bearishBody:'#fdb927', bearishWick:'#fdb927', bearishBorder:'#fdb927', bullishBody:'#9953dc', bullishWick:'#9953dc', bullishBorder:'#9953dc', background:'#000000', foreground:'#ffffff', text:'#ffffff' },
   { bearishBody:'#8d493a', bearishWick:'#8d493a', bearishBorder:'#8d493a', bullishBody:'#d0b8a8', bullishWick:'#8d493a', bullishBorder:'#8d493a', background:'#f8ede3', foreground:'#ffffff', text:'#000000' },
-  { bearishBody:'#00bcd4', bearishWick:'#00bcd4', bearishBorder:'#00bcd4', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#171d2f', foreground:'#ffffff', text:'#ffffff' },
-  { bearishBody:'#7b6229', bearishWick:'#ffaf00', bearishBorder:'#ffaf00', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#0e4b30', foreground:'#ffffff', text:'#ffffff' },
-  { bearishBody:'#da291c', bearishWick:'#da291c', bearishBorder:'#da291c', bullishBody:'#ffc72c', bullishWick:'#ffc72c', bullishBorder:'#ffc72c', background:'#191919', foreground:'#333333', text:'#ffffff' },
-  { bearishBody:'#000000', bearishWick:'#000000', bearishBorder:'#000000', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#a2aaad', foreground:'#222222', text:'#000000' },
-  { bearishBody:'#1db954', bearishWick:'#1db954', bearishBorder:'#1db954', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#191414', foreground:'#111111', text:'#ffffff' },
-  { bearishBody:'#9146ff', bearishWick:'#9146ff', bearishBorder:'#9146ff', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#000000', foreground:'#ffffff', text:'#ffffff' },
-  { bearishBody:'#000000', bearishWick:'#000000', bearishBorder:'#000000', bullishBody:'#81d8d0', bullishWick:'#000000', bullishBorder:'#000000', background:'#ffffff', foreground:'#000000', text:'#000000' },
-  { bearishBody:'#fdb927', bearishWick:'#fdb927', bearishBorder:'#fdb927', bullishBody:'#9953dc', bullishWick:'#9953dc', bullishBorder:'#9953dc', background:'#000000', foreground:'#ffffff', text:'#ffffff' }
+  { bearishBody:'#6b8e23', bearishWick:'#84a54a', bearishBorder:'#5a7b1f', bullishBody:'#556b2f', bullishWick:'#7f9446', bullishBorder:'#4b5e29', background:'#f5f5dc', foreground:'#5c4033', text:'#5c4033' },
+  { bearishBody:'#b8860b', bearishWick:'#8b6508', bearishBorder:'#8b6508', bullishBody:'#daa520', bullishWick:'#c0a040', bullishBorder:'#b8860b', background:'#e5e3df', foreground:'#5c4033', text:'#5c4033' },
+  { bearishBody:'#ff69b4', bearishWick:'#ff69b4', bearishBorder:'#cc5a7f', bullishBody:'#ffb6c1', bullishWick:'#cc5a7f', bullishBorder:'#e69a9a', background:'#fff0f5', foreground:'#c71585', text:'#c71585' },
+  { bearishBody:'#2f4f4f', bearishWick:'#2f4f4f', bearishBorder:'#2f4f4f', bullishBody:'#008080', bullishWick:'#5f9ea0', bullishBorder:'#5f9ea0', background:'#1a1a1a', foreground:'#cfcfcf', text:'#cfcfcf' },
+  { bearishBody:'#a9a9a9', bearishWick:'#696969', bearishBorder:'#b0b0b0', bullishBody:'#808080', bullishWick:'#696969', bullishBorder:'#808080', background:'#f5f5f5', foreground:'#333333', text:'#333333' },
+  { bearishBody:'#fff0bf', bearishWick:'#daa520', bearishBorder:'#daa520', bullishBody:'#7cffe9', bullishWick:'#7cffe9', bullishBorder:'#7cffe9', background:'#121212', foreground:'#121212', text:'#121212' },
+  { bearishBody:'#5a5a5a', bearishWick:'#4a4a4a', bearishBorder:'#3f3f3f', bullishBody:'#b0b0b0', bullishWick:'#a0a0a0', bullishBorder:'#d0d0d0', background:'#121212', foreground:'#e0e0e0', text:'#e0e0e0' },
+  { bearishBody:'#789461', bearishWick:'#789461', bearishBorder:'#789461', bullishBody:'#dbe7c9', bullishWick:'#dbe7c9', bullishBorder:'#dbe7c9', background:'#294b29', foreground:'#dbe7c9', text:'#dbe7c9' },
+  { bearishBody:'#ff57e3', bearishWick:'#ff57e3', bearishBorder:'#ff57e3', bullishBody:'#000000', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#000000', foreground:'#ffffff', text:'#ffffff' },
+  { bearishBody:'#ff9800', bearishWick:'#ff9800', bearishBorder:'#ff9800', bullishBody:'#ffffff', bullishWick:'#ffffff', bullishBorder:'#ffffff', background:'#131722', foreground:'#ffffff', text:'#ffffff' },
+  { bearishBody:'#000000', bearishWick:'#14ff00', bearishBorder:'#14ff00', bullishBody:'#14ff00', bullishWick:'#14ff00', bullishBorder:'#14ff00', background:'#000000', foreground:'#14ff00', text:'#14ff00' },
+  { bearishBody:'#e93479', bearishWick:'#e93479', bearishBorder:'#e93479', bullishBody:'#00fff9', bullishWick:'#00fff9', bullishBorder:'#00fff9', background:'#121212', foreground:'#121212', text:'#121212' },
+  { bearishBody:'#000000', bearishWick:'#000000', bearishBorder:'#000000', bullishBody:'#4caf50', bullishWick:'#000000', bullishBorder:'#000000', background:'#ffffff', foreground:'#000000', text:'#000000' },
+  { bearishBody:'#ff0000', bearishWick:'#ff0000', bearishBorder:'#ff0000', bullishBody:'#000000', bullishWick:'#606060', bullishBorder:'#606060', background:'#000000', foreground:'#606060', text:'#606060' }
 ];
 
 // Modal
@@ -490,8 +519,8 @@ function createChart(containerId, colorSet){
   const series=chart.addCandlestickSeries({
     upColor: colorSet.bullishBody,
     downColor: colorSet.bearishBody,
-    borderUpColor: colorSet.bullishWick,
-    borderDownColor: colorSet.bearishWick,
+    borderUpColor: colorSet.bullishBorder,
+    borderDownColor: colorSet.bearishBorder,
     wickUpColor: colorSet.bullishWick,
     wickDownColor: colorSet.bearishWick
   });
@@ -535,7 +564,7 @@ function createChart(containerId, colorSet){
 }
 
 // Tworzenie wykresów z osobnymi kolorami
-for(let i=1;i<=18;i++){
+for(let i=1;i<=24;i++){
   createChart('chart'+i, chartColors[i-1]);
 }
 
@@ -546,4 +575,3 @@ btn.addEventListener('mouseleave',()=>{ const img=document.getElementById('arrow
 </script>
 </body>
 </html>
-
