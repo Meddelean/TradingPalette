@@ -4,12 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>TradingPalette</title>
+<meta name="description" content="TradingPalette lets you personalize your TradingView charts using pre-made templates. Trade with charts designed exactly how you like.">
 <link rel="icon" type="image/png" href="images/logo.png">
 <script src="https://unpkg.com/lightweight-charts@3.8.0/dist/lightweight-charts.standalone.production.js"></script>
 <style>
 /* --- TUTAJ WSZYSTKO TAKIE JAK BYŁO W TWOIM CSS --- */
-@font-face { font-family: 'TV1'; src: url('fonts/Poppins-Bold.ttf') format('truetype'); }
-@font-face { font-family: 'TV2'; src: url('fonts/NunitoSans.ttf') format('truetype'); }
+@font-face { font-family: 'TV1'; src: url('fonts/Poppins-ExtraBold.ttf') format('truetype'); }
+@font-face { font-family: 'TV2'; src: url('fonts/Poppins-Medium.ttf') format('truetype'); }
 
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'TV1', sans-serif;background:#000000;color:#fff;transition:filter 0.3s ease;   overflow-x: hidden;}
@@ -64,12 +65,12 @@ body{font-family:'TV1', sans-serif;background:#000000;color:#fff;transition:filt
       padding: 0 1rem;
     }
 
-.hero h1{font-size:5rem;margin-bottom:0rem;letter-spacing:2px;font-weight: bold; font-family:'TV1';}
-.hero p{font-size:1.5rem;margin-bottom:2rem;color:#818181;font-family:'TV2';margin-left:20px;margin-right:20px;font-weight: 700;}
+.hero h1{font-size:5rem;margin-bottom:0rem;letter-spacing:0px;font-weight: normal; font-family:'TV1';}
+.hero p{font-size:1.5rem;margin-bottom:2rem;color:#818181;font-family:'TV2';margin-left:20px;margin-right:20px;font-weight: normal;}
 
 .hero button{
   padding:15px 30px;font-size:1.2rem;background:#ffffff;border:none;border-radius:8px;
-  cursor:pointer;color:#000000;transition:background 0.3s;font-family:'TV2';font-weight:600;
+  cursor:pointer;color:#000000;transition:background 0.3s;font-family:'TV2';font-weight: normal;
   display:relative;align-items:center;gap:10px;
    transition: ease-in 300ms;
     border: 2px solid #ffffff;
@@ -112,11 +113,11 @@ body{font-family:'TV1', sans-serif;background:#000000;color:#fff;transition:filt
 }
 .chart-box{display:flex;flex-direction:column;height:400px;}
 .chart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;background:#000000;}
-.chart-header span{font-weight:100;font-size:1.6rem;word-spacing:5px;}
+.chart-header span{font-weight: normal;font-size:1.6rem;word-spacing:3px;font-family:'TV2';}
 .chart-header button{
   font-size:1.2rem;background:#fff;color:#000;
   border-radius:6px;cursor:pointer;height:50px;display:flex;align-items:center;
-  justify-content:center;gap:8px;font-family:'TV2';font-weight:600; transition: ease-in 300ms;
+  justify-content:center;gap:8px;font-family:'TV2';font-weight: normal; transition: ease-in 300ms;
   border: 2px solid #ffffff;
   padding-top:5px;
   padding-bottom:5px;
@@ -205,8 +206,8 @@ a:hover {
 .modal-overlay.active{backdrop-filter:blur(5px);background:rgba(0,0,0,0.7);}
 .modal{
   background:#000000;color:#fff;width:70%;max-width:1200px;height:auto;max-height:90vh;
-  overflow-y:auto;border-radius:14px;position:relative;padding:40px 50px;
-  display:flex;flex-direction:column;opacity:0;transform:scale(0.8);
+  overflow-y:auto;border-radius:14px;position:relative;padding:80px 90px;
+  display:flex;flex-direction:column;opacity:0;transform:scale(0.5);
   transition:opacity 0.35s ease,transform 0.35s ease;font-size:1.5rem;z-index:2001;border: 2px solid #4c4c4c;
 }
 .modal.show{opacity:1;transform:scale(1);padding-bottom: 90px;padding-left: 80px;padding-right: 80px;}
@@ -214,7 +215,7 @@ a:hover {
   position:absolute;top:15px;right:20px;font-size:2rem;font-weight:bold;cursor:pointer;
 }
 #modalTitle{
-  text-align:center;margin-bottom:40px;margin-top:30px;font-size:2rem;font-weight:normal;font-family:'TV1';
+  text-align:center;margin-bottom:40px;margin-top:30px;font-size:3rem;font-weight:normal;font-family:'TV1';
 }
 
 /* Popup kolory */
@@ -231,26 +232,27 @@ a:hover {
 }
 .color-column img{height: 2rem;padding-left: 10px; padding-top: 10px;}
 .color-column-title{
-  font-weight:normal;font-size:1.6rem;color:#b3b3b3;margin-bottom:5px;text-align:center;margin-top: 20px;
+  font-weight:normal;font-size:2rem;color:#b3b3b3;margin-bottom:5px;text-align:center;margin-top: 20px;font-family:'TV1';
 }
 .color-block{
   background:#000000;border-radius:10px;display:flex;position:relative;overflow:hidden;
   min-height:100px;padding:14px;border: 2px solid #565656;
 }
-.color-label{font-size:1.1rem;font-weight:normal;color:#ffffff;margin-bottom:8px;}
+.color-label{font-size:1.1rem;font-weight:normal;color:#ffffff;margin-bottom:8px;letter-spacing: 1px;}
 .color-content{display:flex;flex-direction:column;justify-content:center;flex:1;}
 .color-content span{
-  font-family:'TV1';font-weight:100;color:#b3b3b3;font-size:1.1rem;
+  font-family:'TV2';font-weight:100;color:#b3b3b3;font-size:1.1rem;letter-spacing: 0px;
 }
 .color-block button{
   position:absolute;top:0;right:0;height:100%;border-radius:10px;
   background:#fff;color:#000;padding:0 40px;cursor:pointer;transition:background 0.3s;
-  font-family:'TV1';font-size:1.1rem;font-weight:200;
+  font-family:'TV2';font-size:1.1rem;font-weight:bold;
   transition: ease-in 300ms;
     border-left: 2px solid #ffffff;
     border-top: 2px solid #ffffff;
     border-bottom: 2px solid #ffffff;
     border-right: 2px solid #ffffff;
+    
 }
 .color-block button:hover{ transition: ease-in 100ms;
   background-color: #000;
@@ -289,11 +291,13 @@ a:hover {
 }
 
 @media(max-width:600px){
+
+
   .modal{
     width:95%;padding:20px;height:80%;
   }
  #modalTitle{
-  text-align:center;margin-bottom:0px;margin-top:40px;font-size:2rem;font-weight:normal;font-family:'TV1';
+  text-align:center;margin-bottom:0px;margin-top:40px;font-size:2.1rem;font-weight:normal;font-family:'TV1';
 }
   .color-column{flex:1 1 100%;}
   .color-block{padding:10px;min-height:80px;}
@@ -356,6 +360,17 @@ a:hover {
 }
 
 
+}
+
+@media(max-width:320px){
+  .color-block button{
+  position:absolute;top:0;right:0;height:100%;border-radius:10px;
+  background:#fff;color:#000;padding:0 25px;cursor:pointer;transition:background 0.3s;
+  font-family:'TV2';font-size:0.9rem;font-weight:bold;
+
+    
+}
+ 
 }
 
 </style>
